@@ -1,0 +1,35 @@
+.select {
+  display: flex;
+  width: 240px;
+  height: 51px;
+  padding: 18px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 118px;
+  border: 1px solid #2F80ED;
+  background: #2F80ED;
+  .placeholder {
+    position: relative;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 1.05px;
+    text-transform: uppercase;
+    transition: all 200ms;
+    &::after {
+      content: 'Выбрать квартиру';
+      position: absolute;
+      top: 200%;
+      left: 0;
+    }
+  }
+  &:hover {
+    .placeholder {
+      transform:translateY(-200%);
+    }
+  }
+}

@@ -27,6 +27,14 @@
       left: 0;
     }
   }
+  .chevron {
+    height: 15px;
+    width: 15px;
+    display: flex;
+    svg {
+      margin-bottom: 3px;
+    }
+  }
   &:hover {
     .placeholder {
       transform:translateY(-200%);

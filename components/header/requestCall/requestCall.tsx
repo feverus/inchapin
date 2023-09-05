@@ -5,7 +5,7 @@ export default function RequestCall() {
     <button
       className={styles.textButton}
     >
-      Заказать звонок
+      <span>Заказать звонок</span>
     </button>
   )
 }

@@ -1,4 +1,5 @@
-import { components, DropdownIndicatorProps } from 'react-select';
+import { components, DropdownIndicatorProps } from 'react-select'
+import { ReactSVG } from 'react-svg'
 import styles from './flatSelect.module.scss'
 
 interface ColourOption {
@@ -12,7 +13,7 @@ interface ColourOption {
 export const DropdownIndicator = (props: DropdownIndicatorProps<ColourOption, true>) => {
 	return (
 		<components.DropdownIndicator {...props}>
-			Выбор
+			<ReactSVG src='/svgs/chevron-down.svg' className={styles.chevron} />
 		</components.DropdownIndicator>
 	)
 }
@@ -36,7 +37,7 @@ export const selectOptions = [
 export const selectStyles = {
 		control: (baseStyles: any) => ({
 			...baseStyles,
-			border: 'none', background: 'transparent', width: '200px', fontSize: '14px'
+			border: 'none', background: 'transparent', width: '200px', fontSize: '15px', cursor: 'pointer',
 		}),
 		valueContainer: (baseStyles: any) => ({
 			...baseStyles,
@@ -48,22 +49,28 @@ export const selectStyles = {
 		}),
 		indicatorsContainer: (baseStyles: any) => ({
 			...baseStyles,
-			width: '12px'
+			width: '14px', padding: '0px'
 		}),
 		singleValue: (baseStyles: any) => ({
 			...baseStyles,
-			fontSize: '14px', width: '200px', color: '#212121', 
+			maxWidth: '180px',
+			color: '#FFF',
+			fontStyle: 'normal',
+			fontWeight: '600',
+			lineHeight: '100%',
+			letterSpacing: '1.05px',
+			textTransform: 'uppercase',
 		}),
 		menu: (baseStyles: any) => ({
 			...baseStyles,
-			fontSize: '12px', width: '200px', padding: '0'
+			width: '200px', padding: '0', background: '#2F80ED50',
 		}),
 		menuList: (baseStyles: any) => ({
-			...baseStyles,
-			padding: '2px 0', margin: '0'
+			...baseStyles, 
+			padding: '0', margin: '0'
 		}),
 		option: (baseStyles: any) => ({
 			...baseStyles,
-			padding: '2px 0', margin: '0', textAlign: 'center'
+			padding: '5px 0', margin: '0', textAlign: 'center'
 		}),
 }

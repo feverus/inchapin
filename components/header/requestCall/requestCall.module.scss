@@ -8,4 +8,27 @@
   text-transform: uppercase;
   border: none;
   background: none;
+  width: 155px;
+  height: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  span {
+    position: relative;
+    transition: all 200ms;
+    display: block;    
+    width: 155px;
+    height: 15px;
+    &::after {
+      content: 'Заказать звонок';
+      position: absolute;
+      top: 200%;
+      left: 0;
+    }
+  }
+  &:hover {
+    span {
+      transform:translateY(-200%);
+    }
+  }
 }

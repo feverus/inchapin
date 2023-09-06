@@ -18,7 +18,7 @@ export default function Welcome() {
       <Image
         src="/svgs/inchapin-welcome.svg"
         fill
-        alt="Изображение нашего лучшего дома"
+        alt=""
       />
       </div>
     </section>

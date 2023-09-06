@@ -1,0 +1,33 @@
+@import '@/app/globals.module.scss';
+
+.cover {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  padding-right: $baseWidth;
+  div {
+    position: relative;
+  }
+  .topText {
+    color: #2F80ED;
+    text-align: right;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-transform: uppercase;
+    padding: 98px 0 35px 0;
+  }
+  .image {
+    width: min(5 * $baseWidth, 733px);
+  }
+  .badge {
+    width: 259px;
+    height: 259px;
+    position: absolute;
+    top: 270px;
+    right: calc($baseWidth - 130px);
+  }
+}

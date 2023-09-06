@@ -6,12 +6,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 40px 0;
+  padding: 40px 80px;
+  left: 0;
+  top: 0;
   .phone{
     font-size: 17px;
     font-style: normal;
     font-weight: 600;
     line-height: 17px;
-    a{color: #111;}
+    a {
+      color: #111
+    }
   }
 }

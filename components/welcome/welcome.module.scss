@@ -1,0 +1,38 @@
+.welcome {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  height: max(750px, calc(100vh - 130px));
+  align-content: flex-start;
+  align-items: flex-end;
+  gap: 50px 20px;
+  div {
+    position: relative;
+  }
+  .image {
+    flex: 1 0 100%; 
+    aspect-ratio: 3;
+  }
+  .slogan {
+    flex: 1 0 auto;
+    color: #2F80ED;
+    font-family: Proxima Nova;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+  .name {
+    flex: 0 0 862px;
+    width: 862px;
+    height: 137px;
+    @media (max-width:1024px) {
+      flex: 0 0 554px;
+      width: 554px;
+      height: 88px;      
+    }
+  }
+}

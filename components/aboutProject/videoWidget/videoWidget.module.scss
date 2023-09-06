@@ -1,0 +1,66 @@
+@import '@/app/globals.module.scss';
+
+.effect {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: all 300ms;
+}
+
+.videoWidget {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+  gap: 20px;
+  justify-content: space-around;
+  .about {
+    color: #111;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    text-transform: uppercase;
+    flex: 1 0 auto;
+    span {
+      display: block;
+      &:nth-child(2) {
+        font-weight: 400;
+        opacity: 0.5;
+      }
+    } 
+  }
+  .line {
+    flex: 0 1 140px;
+    height: 1px;
+    background: #D7D7D7;
+  }
+  .playButton {
+    background: none;
+    border: none;
+    position: relative;
+    &::after {
+      @extend .effect;
+      background: url(/svgs/video-play-btn.svg) no-repeat center;
+      background-size: 60%;
+      transform: scale(1);
+    }
+    &::before {
+      @extend .effect;
+      //background-color: white;
+      background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 45%, rgb(255, 255, 255, 0) 50%, rgba(255,255,255,0) 100%);
+      border-radius: 50%;
+      opacity: 0;
+    }
+    &:hover::after {
+      transform: scale(1.2);
+    }
+    &:hover::before {
+      opacity: 0.5;
+    }
+  }
+}

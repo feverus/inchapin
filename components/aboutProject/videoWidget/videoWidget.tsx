@@ -40,7 +40,9 @@ export default function VideoWidget({video = '', length = 0, preview = 'playDefa
         <span>Видео о проекте</span>
         <span>{formatSeconds(length)}</span>
       </div>
+      
       <div className={styles.line}></div>
+
       <button
         className={styles.playButton}
         onClick={() => setPlayed(true)}
@@ -58,17 +60,17 @@ export default function VideoWidget({video = '', length = 0, preview = 'playDefa
         />
       </button>
 
-      {played && 
-        <ReactPlayer
-          ref={player}
-          url={video}
-          loop={false} 
-          pip={false}
-          muted={true} playing={played} controls={true}
-          onEnded={() => setPlayed(false)}
-        />
-      }
-
+      <ReactPlayer
+        ref={player}
+        url={video}
+        loop={false} 
+        pip={false}
+        muted={true}
+        playing={played}
+        controls={true}
+        style={{display:played?'block':'none'}}
+        onEnded={() => setPlayed(false)}
+      />
     </div>
   )
 }

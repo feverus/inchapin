@@ -9,20 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.8",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "@types/react-redux": "^7.1.26",
+    "@types/yup": "^0.32.0",
+    "formik": "^2.4.4",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-input-mask": "3.0.0-alpha.2",
     "react-player": "^2.13.0",
+    "react-redux": "^8.1.2",
     "react-select": "^5.7.4",
     "react-svg": "^16.1.23",
     "sass": "^1.66.1",
     "screenfull": "^6.0.2",
-    "typescript": "5.2.2"
+    "smooth-scrollbar": "^8.8.4",
+    "smooth-scrollbar-react": "^2.4.1",
+    "typescript": "5.2.2",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@types/react-input-mask": "^3.0.2",
     "typescript-plugin-css-modules": "^5.0.1"
   },
   "compilerOptions": {

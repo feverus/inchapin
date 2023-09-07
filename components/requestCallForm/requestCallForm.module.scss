@@ -1,0 +1,100 @@
+@import '@/app/globals.module.scss';
+
+@keyframes formIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes formOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: formIn 1000ms;
+  &.unMaunting {
+    animation: formOut 1000ms;
+    animation-fill-mode: forwards;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 4 * $baseWidth;
+    h2 {
+      color: #000;
+      text-align: center;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; 
+      text-transform: uppercase;
+      margin-bottom: 80px;
+      @media (max-height: 730px) {
+        margin-bottom: 20px;
+      }
+    }
+    .input {
+      height: 81px;
+      label {
+        color: #000;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        text-transform: uppercase;
+      }
+    }
+    p {
+      text-align: center;
+      opacity: 0.5;
+      margin-bottom: 30px;
+      span {
+        text-decoration-line: underline;
+      }
+    }
+    .submit {
+      display: flex;
+      padding: 24px 69px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; 
+      margin-bottom: 30px;
+      border-radius: 100px;
+      border: 1px solid #2F80ED;
+      background: #2F80ED;  
+      color: #FFF;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; 
+      letter-spacing: 1.05px;
+      text-transform: uppercase; 
+    }
+    .errorStatus {
+      color: #ED2F80;
+    }
+  }
+  .close {    
+    background: url(/svgs/close-form-btn.svg) no-repeat center;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    border: none;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+  }
+}

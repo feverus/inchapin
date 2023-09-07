@@ -60,7 +60,7 @@ export default function VideoWidget({video = '', length = 0, preview = 'playDefa
         />
       </button>
 
-      <ReactPlayer
+      {played && <ReactPlayer
         ref={player}
         url={video}
         loop={false} 
@@ -70,7 +70,7 @@ export default function VideoWidget({video = '', length = 0, preview = 'playDefa
         controls={true}
         style={{display:played?'block':'none'}}
         onEnded={() => setPlayed(false)}
-      />
+      />}
     </div>
   )
 }

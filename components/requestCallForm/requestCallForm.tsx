@@ -4,7 +4,7 @@ import styles from './requestCallForm.module.scss'
 import { useSelector, useDispatch } from "react-redux"
 import { setRequestCallFormClosed, setRequestCallFormUnmounted } from "@/store/setSlice"
 import { RootState } from '@/store/store'
-import { Formik, Form, FormikErrors, useFormik } from 'formik'
+import { FormikErrors, useFormik } from 'formik'
 import { TextField, Button, Tooltip } from '@mui/material'
 import InputMask from 'react-input-mask'
 import * as Yup from 'yup'
@@ -53,21 +53,20 @@ export default function RequestCallForm() {
     onSubmit: (values) => console.log(values)
   })
 
+  const formStyle = requestCallFormIsUnmounting ? styles.wrap + ' ' + styles.unMaunting : styles.wrap
+
   const slowCloseForm = async () => {
     dispatch(setRequestCallFormUnmounted())
     await new Promise(resolve => setTimeout(resolve, 1000))
     dispatch(setRequestCallFormClosed())    
   }
 
-  const escHandler = 
-    (event: KeyboardEvent) => {
-      if (event.key === 'Escape' ) {
-        event.preventDefault()
-        slowCloseForm()
-      }
+  const escHandler = (event: KeyboardEvent) => {
+    if (event.key === 'Escape' ) {
+      event.preventDefault()
+      slowCloseForm()
     }
-
-  const formStyle = requestCallFormIsUnmounting ? styles.wrap + ' ' + styles.unMaunting : styles.wrap
+  }  
 
   useEffect(() => {
     if (requestCallFormOpened) {
@@ -77,8 +76,7 @@ export default function RequestCallForm() {
     return () => {
       document.removeEventListener('keydown', escHandler)
     }
-  }, [requestCallFormOpened])
-  
+  }, [requestCallFormOpened])  
 
   const formWithWrap = 
     <div className={formStyle}>

@@ -1,6 +1,13 @@
+@import '@/app/globals.module.scss';
+
 .logo {
   position: relative;
   width: 187px;
   height: 30px;
   top: -5px;
+  flex: 1;
+  @media (max-width: 1440px) {
+    width: 156px;
+    height: 25px;
+  }
 }

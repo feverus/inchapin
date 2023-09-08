@@ -1,9 +1,10 @@
+@import '@/app/globals.module.scss';
+
 .welcome {
   position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: stretch;
   height: max(750px, calc(100vh - 130px));
   align-content: flex-start;
   align-items: flex-end;
@@ -18,17 +19,22 @@
   .slogan {
     flex: 1 0 auto;
     color: #2F80ED;
-    font-family: Proxima Nova;
-    font-size: 31px;
-    font-style: normal;
-    font-weight: 400;
+    font-size: 31px;   
     line-height: 140%;
     text-transform: uppercase;
+    @media (max-width: 1440px) {
+      font-size: 26px;
+    }
   }
   .name {
     flex: 0 0 862px;
     width: 862px;
     height: 137px;
+    @media (max-width: 1440px) {
+      flex: 0 0 717px;
+      width: 717px;
+      height: 114px;  
+    }
     @media (max-width:1024px) {
       flex: 0 0 554px;
       width: 554px;

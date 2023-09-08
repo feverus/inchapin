@@ -1,3 +1,5 @@
+@import '@/app/globals.module.scss';
+
 .header {
   position: fixed;
   display: flex;
@@ -6,14 +8,16 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 40px 80px;
+  padding: var(--headerVertikalPadding) var(--sidePadding);
   left: 0;
   top: 0;
   .phone{
-    font-size: 17px;
-    font-style: normal;
+    font-size: 17px;    
     font-weight: 600;
-    line-height: 17px;
+    line-height: 100%;
+    @media (max-width: 1440px) {
+      font-size: 14px;
+    }
     a {
       color: #111
     }

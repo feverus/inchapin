@@ -1,17 +1,20 @@
 .textButton {
+  height: 15px;
   color: #2F80ED;
-  font-size: 15px;
-  font-style: normal;
+  font-size: 15px;  
   font-weight: 600;
-  line-height: 15px;
-  letter-spacing: 1.05px;
+  line-height: 100%;
   text-transform: uppercase;
+  letter-spacing: 1.05px;
   border: none;
   background: none;
-  height: 15px;
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
+  @media (max-width: 1440px) {
+    font-size: 13px;
+    letter-spacing: 0.91px;
+  }
   span {
     position: relative;
     transition: all 200ms;

@@ -43,6 +43,10 @@ export const selectStyles = {
 			...baseStyles,
 			padding: '0'
 		}),
+		placeholder: (baseStyles: any) => ({
+			...baseStyles,
+			margin: '0'
+		}),
 		indicatorSeparator: (baseStyles: any) => ({
 			...baseStyles,
 			display: 'none'
@@ -58,8 +62,8 @@ export const selectStyles = {
 			fontStyle: 'normal',
 			fontWeight: '600',
 			lineHeight: '100%',
-			letterSpacing: '1.05px',
 			textTransform: 'uppercase',
+			letterSpacing: '1.05px',
 		}),
 		menu: (baseStyles: any) => ({
 			...baseStyles,

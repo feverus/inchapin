@@ -1,32 +1,42 @@
+:root {
+  --headerHeight: 130px;
+  --headerVertikalPadding: 40px;
+  --sidePadding: 80px;
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --headerHeight: 100px;
+    --headerVertikalPadding: 29px;
+    --sidePadding: 40px;
+  }
+}
+
 @font-face {
   font-family: 'Proxima Nova';
   src: url('/fonts/ProximaNova-Semibold.woff2') format('woff2'), url('/fonts/ProximaNova-Semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
+  font-weight: 600;  
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Proxima Nova';
   src: url('/fonts/ProximaNova-Bold.woff2') format('woff2'), url('/fonts/ProximaNova-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
+  font-weight: bold;  
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Proxima Nova';
   src: url('/fonts/ProximaNova-Regular.woff2') format('woff2'), url('/fonts/ProximaNova-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: normal;  
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Proxima Nova';
   src: url('/fonts/ProximaNova-Light.woff2') format('woff2'), url('/fonts/ProximaNova-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 300;  
   font-display: swap;
 }
 
@@ -58,10 +68,10 @@ body {
   height: 100%;
 }
 main {
-  padding: 131px 80px;
+  padding: var(--headerHeight) var(--sidePadding);
 }
 header {
-  height: 130px;
+  height: var(--headerHeight);
   width: 100%;
   z-index: 1;
   background-color: #fff;

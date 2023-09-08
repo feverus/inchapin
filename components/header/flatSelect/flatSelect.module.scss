@@ -10,16 +10,23 @@
   border-radius: 118px;
   border: 1px solid #2F80ED;
   background: #2F80ED;
+  @media (max-width: 1440px) {
+    width: 203px;
+    height: 43px;
+    padding: 15px 20px;
+  }
   .placeholder {
     position: relative;
     color: #FFF;
-    font-size: 15px;
-    font-style: normal;
+    font-size: 15px;    
     font-weight: 600;
     line-height: 100%;
-    letter-spacing: 1.05px;
     text-transform: uppercase;
+    letter-spacing: 1.05px;
     transition: all 200ms;
+    @media (max-width: 1440px) {
+      font-size: 13px;
+    }
     &::after {
       content: 'Выбрать квартиру';
       position: absolute;
@@ -31,6 +38,10 @@
     height: 15px;
     width: 15px;
     display: flex;
+    @media (max-width: 1440px) {
+      height: 12px;
+      width: 13px;
+    }
     svg {
       margin-bottom: 3px;
     }

@@ -1,3 +1,5 @@
+'use client'
+
 import Scrollbar from 'smooth-scrollbar'
 import type { Scrollbar as BaseScrollbar } from "smooth-scrollbar/scrollbar";
 import { useEffect, useRef } from 'react'

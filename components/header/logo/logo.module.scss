@@ -10,4 +10,8 @@
     width: 156px;
     height: 25px;
   }
+  @media (max-width: 768px) {
+    order: 1;
+    flex: 0 0 auto;
+  }
 }

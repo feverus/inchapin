@@ -1,35 +1,39 @@
 @import '@/app/globals.module.scss';
 
-.effect {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  transition: all 300ms;
-}
-
 .videoWidget {
   display: flex;
   flex-direction: row;
   align-items: center;
   position: relative;
   margin-top: 100px;
+  width: 100%;
+  @media (max-width: 1440px) {
+    margin-top: 96px;
+  }
+  @media (max-width: 1024px) {
+    margin-top: 60px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
   gap: 20px;
   justify-content: space-around;
-  .about {
-    
+  .about {    
+    color: #111;
+    flex: 1 0 auto;
     font-weight: 600;
     line-height: 160%;
     text-transform: uppercase;
-    color: #111;
     font-size: 18px;
-    flex: 1 0 auto;
+    @media (max-width: 1440px) {
+      font-size: 14px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 10px;
+    }
     span {
       display: block;
-      &:nth-child(2) {
-        
+      &:nth-child(2) {        
         opacity: 0.5;
       }
     } 
@@ -43,6 +47,16 @@
     background: none;
     border: none;
     position: relative;
+    flex: 0 0 241px;
+    @media (max-width: 1440px) {
+      flex: 0 0 186px;
+    }
+    @media (max-width: 1024px) {
+      flex: 0 0 133px;
+    }
+    @media (max-width: 600px) {
+      flex: 0 0 131px;
+    }
     &::after {
       @extend .effect;
       background: url(/svgs/video-play-btn.svg) no-repeat center;

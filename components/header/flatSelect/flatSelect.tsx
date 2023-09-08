@@ -16,7 +16,7 @@ export default function FlatSelect() {
       onChange={(e) => setSelectedOption}
       options={selectOptions}
       styles={selectStyles}
-      components={{ DropdownIndicator }} 
+      components={{ DropdownIndicator}} 
       isSearchable={false}
       placeholder={ Placeholder }
     />

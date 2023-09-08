@@ -92,6 +92,7 @@ export default function RequestCallForm() {
           onChange={formik.handleChange}
           label="ВАШЕ ИМЯ"
           variant='standard'
+          fullWidth
         />
 
         <InputMask
@@ -107,6 +108,7 @@ export default function RequestCallForm() {
             className={styles.input}
             label="ТЕЛЕФОН"
             variant='standard'
+            fullWidth
           />
         </InputMask>
 
@@ -117,6 +119,7 @@ export default function RequestCallForm() {
           onChange={formik.handleChange}
           label="E-MAIL"
           variant='standard'
+          fullWidth
         />
 
         <p>Нажимая на кнопку «Отправить», вы ознакомлены и соглашаетесь с <Tooltip title={tooltipPolitic}><span>политикой обработки персональных данных</span></Tooltip></p>

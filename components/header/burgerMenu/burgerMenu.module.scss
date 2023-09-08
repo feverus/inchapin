@@ -1,5 +1,11 @@
 @import '@/app/globals.module.scss';
 
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+}
+
 .burgerMenu {
   border: none;
   background: none;
@@ -9,14 +15,40 @@
   align-items: center;
   flex: 0 0 auto;
   width: 104px;
+  @media (max-width: 1440px) {
+    width: 88px;
+    svg {
+      transform: scale(0.88);
+    }
+  }
+  @media (max-width: 1024px) {
+    width: 83px;
+    svg {
+      transform: scale(0.85);
+    }
+  }
+  @media (max-width: 768px) {
+    width: 29px;
+    svg {
+      transform: scale(0.85);
+    }
+  }
   span {
     color: #111;
-    font-size: 15px;
-    
     font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
     letter-spacing: 1.05px;
+    font-size: 15px;
+    @media (max-width: 1440px) {
+      font-size: 13px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   rect {
     transition: all 300ms;
@@ -28,5 +60,8 @@
     rect[id=bottomLine] {
       transform: translateY(3px);
     }
+  }
+  &:active {
+    animation: blink 200ms;
   }
 }

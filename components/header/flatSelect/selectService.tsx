@@ -67,7 +67,7 @@ export const selectStyles = {
 		}),
 		menu: (baseStyles: any) => ({
 			...baseStyles,
-			width: '200px', padding: '0', background: '#2F80ED50',
+			width: '160px', padding: '0px', background: '#2F80EDf0', marginTop: '3px',
 		}),
 		menuList: (baseStyles: any) => ({
 			...baseStyles, 

@@ -1,4 +1,5 @@
 import styles from './burgerMenu.module.scss'
+import { Tooltip } from '@mui/material'
 
 const burgerIcon = 
   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="34" viewBox="0 0 38 34" fill="#2F80ED" >
@@ -9,9 +10,10 @@ const burgerIcon =
 
 export default function BurgerMenu() {
   return (
-    <button className={styles.burgerMenu}>
-      {burgerIcon}
-      <span>меню</span>
-    </button>
+    <Tooltip title={`Эта кнопка открывает меню, но его пока нет`}><button className={styles.burgerMenu}>
+        {burgerIcon}
+        <span>меню</span>
+      </button>
+    </Tooltip>
   )
 }

@@ -14,7 +14,6 @@ export default function WelcomeImage() {
 
   useEffect(() => {
     const onResize = () => {
-      console.log(window.innerWidth)
       if (window.innerWidth <= 360) setFileName('/images/welcomeImage360.jpg')   
       else if (window.innerWidth <= 768) setFileName('/images/welcomeImage768.jpg')
       else if (window.innerWidth <= 1024) setFileName('/images/welcomeImage1024.jpg')

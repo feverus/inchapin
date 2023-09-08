@@ -11,12 +11,25 @@
   padding: var(--headerVertikalPadding) var(--sidePadding);
   left: 0;
   top: 0;
+  @media (max-width: 1440px) {
+    gap: 25px;
+  }
+  //предотвращение уменьшения логотипа
+  @media (max-width: 850px) {
+    gap: 10px;
+  }
   .phone{
     font-size: 17px;    
     font-weight: 600;
     line-height: 100%;
     @media (max-width: 1440px) {
       font-size: 14px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 13px;
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
     a {
       color: #111

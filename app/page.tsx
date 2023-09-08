@@ -6,7 +6,7 @@ import AboutProject from '@/components/aboutProject/aboutProject'
 import RequestCallForm from '@/components/requestCallForm/requestCallForm'
 
 export default function Home() {
-  return (<>   
+  return (<> 
       <main>
         <Welcome />
         <AboutProject />

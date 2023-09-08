@@ -10,7 +10,7 @@ export default function Description() {
         <span>спокойной и размеренной жизни</span>
       </h1>
       <div className={styles.text}>
-        <span>Квартиры от 65 до 356 м2 с чистовой отделкой,</span>
+        <span>Квартиры от 65 до 356 м<sup>2</sup> с чистовой отделкой,</span>
         <span>балконами, лоджиями и террасами В собственной ЗАКРЫТОЙ охраняемой территории.</span>
       </div>      
       <VideoWidget video={'https://www.youtube.com/watch?v=9eF3kupk-yg'} length={123} />

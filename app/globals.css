@@ -12,6 +12,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  :root {
+    --headerHeight: 123px;
+    --headerVertikalPadding: 40px;
+    --sidePadding: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --headerHeight: 80px;
+    --headerVertikalPadding: 28px;
+    --sidePadding: 20px;
+  }
+}
+
 @font-face {
   font-family: 'Proxima Nova';
   src: url('/fonts/ProximaNova-Semibold.woff2') format('woff2'), url('/fonts/ProximaNova-Semibold.woff') format('woff');

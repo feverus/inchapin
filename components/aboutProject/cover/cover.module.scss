@@ -6,25 +6,79 @@
   flex-direction: column;
   align-items: flex-end;
   position: relative;
-  padding-right: $baseWidth;
+  padding-right: calc((100vw - 2 * var(--sidePadding)) / 12);
+  @media (max-width: 1024px) {
+    padding-right: calc((100vw - 2 * var(--sidePadding)) / 13);
+  }
+  @media (max-width: 768px) {
+    padding-right: calc(1.5 * (100vw - 2 * var(--sidePadding)) / 11);
+  }
+  @media (max-width: 600px) {
+    padding-right: calc(1.5 * (100vw - 2 * var(--sidePadding)) / 11);
+  }
   div {
     position: relative;
   }
   .topText {
     @extend .heading;
-    color: #2F80ED;
+    color: $accent_color;
     text-align: right;
     font-size: 17px;
     padding: 98px 0 35px 0;
+    @media (max-width: 1440px) {
+      font-size: 13px;
+      padding: 67px 0 25px 0;
+    }
+    @media (max-width: 1024px) {
+      font-size: 11px;
+      padding: 89px 0 21px 0;
+    }
+    @media (max-width: 768px) {
+      padding: 39px 0 20px 0;
+    }
+    @media (max-width: 600px) {
+      padding: 40px 0 11px 0;
+    }
   }
   .image {
-    width: min(5 * $baseWidth, 733px);
+    width: min(5 * calc((100vw - 2 * var(--sidePadding)) / 12), 733px);
+    @media (max-width: 1024px) {
+      width: min(calc(5.5 * (100vw - 2 * var(--sidePadding)) / 13), 733px);
+    }
+    @media (max-width: 768px) {
+      width: min(calc(5 * (100vw - 2 * var(--sidePadding)) / 11), 733px);
+      margin-left: calc(-1 * (100vw - 2 * var(--sidePadding)) / 11);
+    }
+    @media (max-width: 600px) {
+      width: 100vw;
+      margin-left: calc(-1 * (100vw - 2 * var(--sidePadding)) / 11);
+    }
   }
   .badge {
-    width: 259px;
-    height: 259px;
+    --baseBadge: 260px;
     position: absolute;
+    width: var(--baseBadge);
+    height: var(--baseBadge);
     top: 270px;
-    right: calc($baseWidth - 130px);
+    right: calc((100vw - 2*var(--sidePadding)) / 12 - var(--baseBadge) / 2);
+    @media (max-width: 1440px) {
+      --baseBadge: 200px;
+      top: 200px;
+    }
+    @media (max-width: 1024px) {
+      --baseBadge: 148px;
+      right: calc((100vw - 2*var(--sidePadding)) / 13 - var(--baseBadge) / 2);
+      top: 185px;
+    }
+    @media (max-width: 768px) {
+      --baseBadge: 81px;
+      right: calc(1.5 * (100vw - 2*var(--sidePadding)) / 11 - var(--baseBadge) / 2);
+      top: 133px;
+    }
+    @media (max-width: 600px) {
+      --baseBadge: 87px;
+      right: calc(1.5 * (100vw - 2*var(--sidePadding)) / 11 - var(--baseBadge) / 2);
+      top: 126px;
+    }
   }
 }
